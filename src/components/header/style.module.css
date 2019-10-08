@@ -1,0 +1,23 @@
+.grow {
+    flex-grow: 1;
+}
+
+.toolbar{
+    min-height: 20px !important;
+}
+
+.iconButton{
+    color: var(--color02) !important;
+}
+
+.typography{
+    display: block;
+}
+
+.search{
+    position: relative;
+    border-radius: 2px;
+    background-color: var(--color01), 0.15;
+    width: 100%;
+    
+}
