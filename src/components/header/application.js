@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import config from 'react-global-configuration';
 
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -21,20 +21,27 @@ import styles from './style.module.css';
 import { style } from '@material-ui/system';
 
 
+
 class Header extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className={styles.grow}>
-                <AppBar position="static">
+                <AppBar position="static" className={styles.appbar}>
                     <Toolbar className={styles.toolbar}>
                         <IconButton className={styles.iconButton}>
                             <MenuIcon></MenuIcon>
                         </IconButton>
-                        <Typography className={styles.typography} variant="h6" noWrap>{config.get("nameapp")}
+                        <Typography className={styles.typography} variant="h6">
+                            {config.get("nameapp")}
                         </Typography>
                         <div className={styles.search}>
                             <SearchIcon></SearchIcon>
                         </div>
+                        <InputBase
+                            placeholder="Tìm kiếm"
+                            className={styles.input}
+                        >
+                        </InputBase>
                     </Toolbar>
 
                 </AppBar>

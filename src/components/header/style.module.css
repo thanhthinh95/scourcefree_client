@@ -2,22 +2,35 @@
     flex-grow: 1;
 }
 
+.appbar{
+    background-color: var(--color01) !important;
+}
+
 .toolbar{
     min-height: 20px !important;
 }
 
 .iconButton{
-    color: var(--color02) !important;
+    color: white !important;
 }
 
 .typography{
     display: block;
+    font-weight: 600 !important;
 }
 
 .search{
     position: relative;
     border-radius: 2px;
-    background-color: var(--color01), 0.15;
+    background-color: var(--color03), 0.15;
     width: 100%;
-    
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.input{
+    width: 100%;
+    color: var(--color05) !important;
+    border: solid 1px 
+
 }

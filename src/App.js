@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 
@@ -7,12 +7,13 @@ import Body from './components/body/application'
 
 class App extends Component {
 
-  constructor(){
+
+  constructor() {
     super()
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <Header></Header>
         <Body></Body>
