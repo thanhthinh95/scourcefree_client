@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styles from './style.module.css';
 
+import { FaSearch } from 'react-icons/fa'
+
 import {
     Container,
     Button,
@@ -25,14 +27,15 @@ class Header extends Component {
                     <Col xl lg='1'>
                         <Form >
                             <InputGroup>
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                                </InputGroup.Prepend>
                                 <FormControl
                                     placeholder="Search"
                                     aria-label="Search"
                                     aria-describedby="basic-addon1"
                                 />
+
+                                <Button>
+                                    <FaSearch />
+                                </Button>
                             </InputGroup>
                         </Form>
                     </Col>

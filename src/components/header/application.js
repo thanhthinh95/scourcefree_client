@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import config from 'react-global-configuration';
-// import styles from './style.module.css';
+import styles from './style.module.css';
 
 import {
     Navbar,
@@ -8,24 +8,12 @@ import {
     NavDropdown
 } from 'react-bootstrap';
 
-
-
-
-
-
-
-
-
 class Header extends Component {
     render() {
         return (
-            <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">{config.get('nameapp')}</Navbar.Brand>
-
+            <Navbar className={styles.navbar} expand="lg" bg="dark" variant="dark" collapseOnSelect>
+                <Navbar.Brand className="pl-5" href="#home">{config.get('nameapp')}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
-
-
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -46,6 +34,8 @@ class Header extends Component {
                 </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
+
+
             </Navbar>
         )
     }
