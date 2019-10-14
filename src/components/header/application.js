@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import config from 'react-global-configuration';
+
+import { withTranslation, Trans } from 'react-i18next';
+
 import styles from './style.module.css';
 
 import {
@@ -8,30 +10,44 @@ import {
     NavDropdown
 } from 'react-bootstrap';
 
-class Header extends Component {
+
+
+class myClass extends Component {
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            trans : this.props.t,
+            i18n : this.props.i18n
+        }
+    }
+
+
+ 
+
     render() {
+        
+        const trans = this.state.trans;
+        const i18n = this.state.i18n;
+
         return (
             <Navbar className={styles.navbar} expand="lg" bg="dark" variant="dark" collapseOnSelect>
-                <Navbar.Brand className="pl-5" href="#home">{config.get('nameapp')}</Navbar.Brand>
+                <Navbar.Brand className="pl-5" href="#home">{trans('nameapp')}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link href="#features">{trans('header.one')}</Nav.Link>
+                        <Nav.Link href="#pricing">{trans('header.two')}</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                </Nav.Link>
+                        <NavDropdown title={trans('header.language.value')} id="collasible-nav-dropdown">
+                            <NavDropdown.Item onClick={() => i18n.changeLanguage('en')}>{trans('header.language.en')}</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => i18n.changeLanguage('vn')}>{trans('header.language.vn')}</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#language/more">{trans('header.language.more')}</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href="#login">{trans('header.login')}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
@@ -41,4 +57,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default withTranslation('common')(myClass); 

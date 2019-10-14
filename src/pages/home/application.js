@@ -2,36 +2,34 @@ import React, { Component } from 'react';
 import './style.css';
 
 import { Container } from 'react-bootstrap'
-import { translate, Trans } from 'react-i18next';
 
 
 import Header from '../../components/header/application'
 import Body from '../../components/body/application'
 
-
+import { withTranslation, Trans } from 'react-i18next';
 
 
 class myClass extends Component {
+  constructor() {
+    super();
+    
 
+  }
 
   render() {
+    const { t, i18n } = this.props;
 
     return (
       <div>
-         <Trans i18nKey='welcome.intro'>
-                To get started, edit <code>src/App.js</code> and save to reload.
-            </Trans>
-        {/* <Header></Header>
+        <Header></Header>
         <Body></Body>
         <Body></Body>
         <Body></Body>
-        <Body></Body> */}
+        <Body></Body>
       </div>
-
     )
   }
 }
 
-
-
-export default  translate('common')(myClass);
+export default withTranslation('common')(myClass); 

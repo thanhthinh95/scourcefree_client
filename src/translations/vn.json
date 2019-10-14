@@ -1,8 +1,0 @@
-{
-    "locale" : "vn",
-    "messages" : {
-        "nameapp" : "SourceFree",
-        "welcome" : "Chào mừng bạn {value}"
-    }
-
-}

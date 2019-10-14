@@ -1,0 +1,20 @@
+{
+    "common": {
+        "nameapp" : "SourceFree",
+        "header" : {
+            "one" : "one",
+            "two" : "two",
+            "language" : {
+                "value" : "Language",
+                "en" : "English",
+                "vn" : "VietNam",
+                "more" : "more"
+            },
+            "login" : "Login"
+        },
+        "welcome": {
+            "title": "Welcome to {{framework}}"
+        }
+    }
+
+}
