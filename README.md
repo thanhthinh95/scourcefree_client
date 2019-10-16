@@ -1,3 +1,13 @@
+Quy tắc đặt tên
+- Fodel component: là một danh từ, viết thường
+    +) application.js : Là file tổ chức giao diện hiện thị, xử lý logic nghiệp vụ phía client
+    +) style.module.css : Là file css của giao diện từng component
+    +) test.js : Là file test kiểm thử từng component
+- Page: Là một danh từ, viết thường đại diện cho 1 page hiển thị của trang web
+- Trong một page có thể có nhiều component
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

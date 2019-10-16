@@ -4,6 +4,9 @@
         "header" : {
             "one" : "one",
             "two" : "two",
+            "search" : {
+                "placeholder" : "Search by caterogy, type, programming languge, ..."
+            },
             "language" : {
                 "value" : "Language",
                 "en" : "English",
@@ -11,6 +14,16 @@
                 "more" : "more"
             },
             "login" : "Login"
+        },
+        "slide" :{
+            "first" : {
+                "title" : "Save time",
+                "content" : "Clear and transparent source code, dedicated support"
+            },
+            "second" : {
+                "title" : "Convenient",
+                "content" : "Search for everything in one place"
+            }
         },
         "welcome": {
             "title": "Welcome to {{framework}}"

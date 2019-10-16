@@ -4,6 +4,9 @@
         "header" : {
             "one" : "một",
             "two" : "hai",
+            "search" : {
+                "placeholder" : "Tìm kiếm theo danh mục, thể loại, ngôn ngữ lập trình, ..."
+            },
             "language" : {
                 "value" : "Ngôn ngữ",
                 "en" : "Tiếng Anh",
@@ -12,6 +15,17 @@
             },
             "login" : "Đăng nhập"
         },
+        "slide" :{
+            "first" : {
+                "title" : "Tiết kiệm thời gian",
+                "content" : "Mã nguồn rõ ràng minh bạch, hỗ trợ chuyên nghiệp"
+            },
+            "second" : {
+                "title" : "Tiện ích",
+                "content" : "Tìm kiếm mọi thử ở một nơi"
+            }
+        },
+        
         "welcome": {
             "title": "Chào mừng {{framework}}"
         }

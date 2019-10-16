@@ -1,0 +1,17 @@
+._cart{
+    width: 12rem;
+    margin: 1rem auto !important;
+
+}
+
+
+._star {
+    color:  var(--color03) !important;
+}
+
+
+._hasTag{
+    color: var(--color02);
+    background-color: var(--color03) !important;
+    size: 1rem;
+}

@@ -1,40 +1,20 @@
-.navbar{
+._navbar{
     background-color: var(--color01) !important;
 }
 
-.grow {
-    flex-grow: 1;
+._formSearch{
+    width: 60%;
 }
 
-.appbar{
-    background-color: var(--color01) !important;
+._btnSearch{
+    background:  var(--color03) !important;
+    border-color: var(--color03) !important;
+    border-radius: 0;
 }
 
-.toolbar{
-    min-height: 20px !important;
+._btnCart{
+    background:  var(--color02) !important;
+    border-color: var(--color02) !important;
+    border-radius: 0;
 }
 
-.iconButton{
-    color: white !important;
-}
-
-.typography{
-    display: block;
-    font-weight: 600 !important;
-}
-
-.search{
-    position: relative;
-    border-radius: 2px;
-    background-color: var(--color03), 0.15;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 10px;
-}
-
-.input{
-    width: 100%;
-    color: var(--color05) !important;
-    border: solid 1px 
-
-}

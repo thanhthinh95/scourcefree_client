@@ -8,8 +8,6 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 import Home from './pages/home/application';
-import Login from './pages/login/application';
-
 
 
 import { I18nextProvider } from 'react-i18next';

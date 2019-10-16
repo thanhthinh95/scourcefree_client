@@ -1,105 +1,67 @@
 import React, { Component } from 'react'
 import styles from './style.module.css';
 
-import { FaSearch } from 'react-icons/fa'
+import {
+
+} from 'react-icons/fa'
 
 import {
-    Container,
-    Button,
     Row,
-    Form,
-    InputGroup,
-    FormControl,
     Col,
-    Carousel,
-    Tabs,
-    Tab
 } from 'react-bootstrap'
 
+import Category from '../category_body/application';
+import Filter from '../filter_body/application';
+import News from '../news_body/application';
+import Slide from '../slide_body/application';
+import ItemCode from '../item_code/application';
 
 
 
-class Header extends Component {
+class myClass extends Component {
+
+    renderItem = () => {
+        const data = [];
+        for (let i = 0; i < 10; i++) {
+            let rowObj = [];
+            for (let j = 0; j < 4; j++) {
+                rowObj.push(<Col>
+                    <ItemCode num={j + 1}></ItemCode>
+                </Col>)
+            }
+            data.push(<Row>
+                {rowObj}
+            </Row>)
+
+
+        }
+        return data;
+    }
+
+
+
     render() {
         return (
-            <Container>
-                <Row className="justify-content-md-center">
-                    <Col xl lg='1'>
-                        <Form >
-                            <InputGroup>
-                                <FormControl
-                                    placeholder="Search"
-                                    aria-label="Search"
-                                    aria-describedby="basic-addon1"
-                                />
+            <div>
+                <Category></Category>
 
-                                <Button>
-                                    <FaSearch />
-                                </Button>
-                            </InputGroup>
-                        </Form>
+                <Row className="pl-3 pr-3">
+                    <Col xs lg="2">
+                        <Filter></Filter>
                     </Col>
 
-                </Row>
+                    <Col xs lg="8" >
+                        <Slide></Slide>
 
-                <Row className="justify-content-md-center">
-                    <Col xs lg="1"></Col>
-                    <Col md="auto w-60">
-                        <Carousel>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="images/01.jpg"
-                                    alt="First slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="images/02.jpg"
-                                    alt="Third slide"
-                                />
+                        {this.renderItem()}
 
-                                <Carousel.Caption>
-                                    <h3>Second slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src="images/03.jpg"
-                                    alt="Third slide"
-                                />
-
-                                <Carousel.Caption>
-                                    <h3>Third slide label</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
                     </Col>
-
-                    <Col xs lg="1"></Col>
+                    <Col xs lg="2">
+                        <News></News>
+                    </Col>
                 </Row>
 
-                <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                    <Tab eventKey="home" title="Home">
-                        dgdsfgfd
-                    </Tab>
-                    <Tab eventKey="profile" title="Profile">
-                        fasfagdfg
-                    </Tab>
-                    <Tab eventKey="contact" title="Contact" disabled>
-                        fsdfasdf
-                    </Tab>
-                </Tabs>
-            </Container>
-
+            </div>
 
 
 
@@ -108,4 +70,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default myClass
