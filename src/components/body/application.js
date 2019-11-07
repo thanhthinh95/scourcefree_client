@@ -21,21 +21,52 @@ import ItemCode from '../item_code/application';
 class myClass extends Component {
 
     renderItem = () => {
-        const data = [];
-        for (let i = 0; i < 10; i++) {
-            let rowObj = [];
-            for (let j = 0; j < 4; j++) {
-                rowObj.push(<Col>
-                    <ItemCode num={j + 1}></ItemCode>
-                </Col>)
+        let data = [
+            {
+                name: "Lập trình cơ bản 01, Lập trình co bản 02",
+                vote: 3,
+                hashTags: ["Android", "C#"]
+            },
+            {
+                name: "Rắn săn mồi trong mạng Lan",
+                vote: 2,
+                hashTags: [".NET", "C#"]
+
+            },
+            {
+                name: "Tin học ứng dụng",
+                vote: 4,
+                hashTags: ["C++", "C#"]
+
+            },
+            {
+                name: "Lập trình OOP",
+                vote: 1,
+                hashTags: ["HI", "II"]
+            },
+            {
+                name: "Lập trình cơ bản 01",
+                vote: 4,
+                hashTags: ["Android", "C#"]
+            },
+            {
+                name: "Lập trình cơ bản 01, Lập trình co bản 02",
+                vote: 4,
+                hashTags: ["Android", "C#"]
+
             }
-            data.push(<Row>
-                {rowObj}
-            </Row>)
+        ]
+
+        return data.map((item, index) => {
+            return <Col md="3">
+                <ItemCode
+                    name={item.name}
+                    vote={item.vote}
+                    hashTags={item.hashTags}></ItemCode>
+            </Col>
+        })
 
 
-        }
-        return data;
     }
 
 
@@ -50,11 +81,11 @@ class myClass extends Component {
                         <Filter></Filter>
                     </Col>
 
-                    <Col xs lg="8" >
+                    <Col xs lg md="8" >
                         <Slide></Slide>
-
-                        {this.renderItem()}
-
+                        <Row>
+                            {this.renderItem()}
+                        </Row>
                     </Col>
                     <Col xs lg="2">
                         <News></News>

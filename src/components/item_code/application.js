@@ -89,15 +89,14 @@ class myClass extends Component {
 
                 <Card.Header>
                     <div>
-                        <label title='asdf'>Rắn săn mồi trong mạng LAN</label>
+                        <label title='asdf'>{this.props.name}</label>
                     </div>
-                    {this.starVote(Number(this.props.num))}
+                    {this.starVote(Number(this.props.vote))}
 
 
 
                     <h6 className={styles._divHashTag}>
-                        <Badge className={styles._hashTag}>@Android</Badge>
-                        <Badge variant="light">@Android</Badge>
+                        <Badge variant="light">{this.props.hashTags}</Badge>
                     </h6>
                 </Card.Header>
             </Card>

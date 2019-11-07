@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './application';
 
 it('renders without crashing', () => {
-  console.log('begin test app.js')
+  console.log('begin test page home.js')
 
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
